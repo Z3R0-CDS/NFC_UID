@@ -10,7 +10,7 @@ class Enviroment():
 
     __last_chip__ = ""
 
-def nfc_reader(output=True, keyboard_type=False):
+def nfc_reader(output=True, keyboard_output=False):
     """
     Returns UID of NFC Chip/Card
     Set ouput to False if no output is required default is True
@@ -28,7 +28,7 @@ def nfc_reader(output=True, keyboard_type=False):
         if data != "" and data != None and data != Enviroment.__last_chip__:
             if output:
                 print(f"Success in reading chip..\nUID: {data}")
-            if keyboard_type:
+            if keyboard_output:
                 Keyboard.write(data)
             return data
     except UnboundLocalError:
