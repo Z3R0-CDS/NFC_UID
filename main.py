@@ -12,9 +12,8 @@ class Enviroment():
 
     __last_chip__ = ""
 
-async def nfc_reader(output=True, keyboard_type=False):
+def nfc_reader(output=True, keyboard_type=False):
     """
-    ASYNC Function!
     Returns UID of NFC Chip/Card
     Set ouput to False if no output is required default is True
     """
@@ -43,5 +42,5 @@ async def nfc_reader(output=True, keyboard_type=False):
     
 
 if __name__ == "__main__":
-    asyncio.run(nfc_reader(True, False))
+    nfc_reader()
 
