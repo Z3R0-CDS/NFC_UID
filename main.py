@@ -6,8 +6,6 @@ from smartcard.Exceptions import CardRequestTimeoutException
 from smartcard.util import toHexString
 import keyboard as Keyboard
 
-SUCCESS_AUDIO = ".\sounds\sccs.mp3"
-
 class Enviroment():
 
     __last_chip__ = ""
