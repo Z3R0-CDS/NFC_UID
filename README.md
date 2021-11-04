@@ -9,3 +9,6 @@ Anyways have fun with it and if you copy it I would be happy to get a mention ^^
  smartcard is NOT a module it self / well it is you can kinda install it but I could not use it!
  So use pip install pyscard  instead!
  Asides that just pip install keyboard and you are ready to go.
+
+## Tested
+ Tested Scanner: ACR1252
