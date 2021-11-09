@@ -1,16 +1,19 @@
 
 from smartcard.CardType import AnyCardType
 from smartcard.CardRequest import CardRequest
-from smartcard.CardConnection import CardConnection
 from smartcard.Exceptions import CardRequestTimeoutException
 from smartcard.util import toHexString
 import keyboard as Keyboard
+import time
+import sys
 
+SUCCESS_AUDIO = ".\sounds\sccs.mp3"
 
 class Enviroment():
+
     __last_chip__ = ""
 
-def nfc_reader(debug=True ,output=True, keyboard_output=False, set_timeout=120):
+def nfc_reader(debug=True ,output=True, keyboard_output=False, set_timeout=120, set_cooldown = 3):
     """
     Returns UID of NFC Chip/Card\n
     Set ouput to False if no output is required default is True \n
@@ -34,14 +37,17 @@ def nfc_reader(debug=True ,output=True, keyboard_output=False, set_timeout=120):
             data = data.replace(" ", "")
             if data != "" and data != None and data != Enviroment.__last_chip__:
                 card_not_found = False
+                Enviroment.__last_chip__ = data
                 if output:
                     print(f"Success in reading chip..\nUID: {data}")
                 if keyboard_output:
-                    Keyboard.write(data)
-                return data
+                    if debug:
+                        print("Output send to keyboard")
+                    Keyboard.write(f"{data}")
+                else:
+                    return data
+                time.sleep(set_cooldown)
             cs=None
-        except UnboundLocalError:
-            pass
         except CardRequestTimeoutException:
             if debug:
                 print("Connection timed out... New request starting")
@@ -51,7 +57,4 @@ def nfc_reader(debug=True ,output=True, keyboard_output=False, set_timeout=120):
     
 
 if __name__ == "__main__":
-    nfc_reader(True, False)
-
-
-
+    nfc_reader()
