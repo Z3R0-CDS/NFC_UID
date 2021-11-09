@@ -12,12 +12,12 @@ class Enviroment():
 
 def nfc_reader(debug=True ,output=True, keyboard_output=False, set_timeout=120):
     """
-    Returns UID of NFC Chip/Card
-    Set ouput to False if no output is required default is True
-    debug -> def = True          | Output for errors etc. will be enabled
-    output -> def = True         | Output for success/feedback etc. will be enabled
-    keyboard_output -> def False | Types output like typing it
-    set_timeout -> def 120/2min  | Sets timeout in seconds. Timeout for scan card.
+    Returns UID of NFC Chip/Card\n
+    Set ouput to False if no output is required default is True \n
+    debug -> def = True          | Output for errors etc. will be enabled \n
+    output -> def = True         | Output for success/feedback etc. will be enabled \n
+    keyboard_output -> def False | Types output like typing it \n
+    set_timeout -> def 120/2min  | Sets timeout in seconds. Timeout for scan card. \n
     """
     card_not_found = True
     while card_not_found:
