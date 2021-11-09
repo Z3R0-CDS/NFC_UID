@@ -7,11 +7,10 @@ import keyboard as Keyboard
 import time
 import sys
 
-SUCCESS_AUDIO = ".\sounds\sccs.mp3"
 
 class Enviroment():
-
     __last_chip__ = ""
+    __loop__ = True
 
 def nfc_reader(debug=True ,output=True, keyboard_output=False, set_timeout=120, set_cooldown = 3):
     """
@@ -55,6 +54,18 @@ def nfc_reader(debug=True ,output=True, keyboard_output=False, set_timeout=120, 
             if debug:
                 print(f"Error: {x}")
     
+def loop(debug=True ,output=True, keyboard_output=False, set_timeout=120, set_cooldown = 3):
+    """
+    Returns UID of NFC Chip/Card\n
+    Set ouput to False if no output is required default is True \n
+    Will be looped until Enviroment.__loop__ is False \n
+    debug -> def = True          | Output for errors etc. will be enabled \n
+    output -> def = True         | Output for success/feedback etc. will be enabled \n
+    keyboard_output -> def False | Types output like typing it \n
+    set_timeout -> def 120/2min  | Sets timeout in seconds. Timeout for scan card. \n
+    """
+    while Enviroment.__loop__:
+        nfc_reader(debug=debug ,output=output, keyboard_output=keyboard_output, set_timeout=set_timeout, set_cooldown = set_cooldown)
 
 if __name__ == "__main__":
     nfc_reader()
