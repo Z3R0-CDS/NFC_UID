@@ -12,3 +12,4 @@ Anyways have fun with it and if you copy it I would be happy to get a mention ^^
 
 ## Tested
  Tested Scanner: ACR1252
+ Tested OS: Windows 10
