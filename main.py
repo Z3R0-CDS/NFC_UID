@@ -1,12 +1,32 @@
-
-from smartcard.CardType import AnyCardType
-from smartcard.CardRequest import CardRequest
-from smartcard.Exceptions import CardRequestTimeoutException
-from smartcard.util import toHexString
-import keyboard as Keyboard
 import time
 import sys
+import os
 
+try:
+    from smartcard.CardType import AnyCardType
+    from smartcard.CardRequest import CardRequest
+    from smartcard.Exceptions import CardRequestTimeoutException
+    from smartcard.util import toHexString
+except ImportError:
+    os.system('python -m pip install pyscard')
+try:
+    import requests
+except ImportError:
+    os.system('python -m pip install requests')
+try:
+    import keyboard as Keyboard
+except ImportError:
+    os.system('python -m pip install keyboard')
+try:
+    import keyboard as Keyboard  
+    import requests
+    from smartcard.CardType import AnyCardType
+    from smartcard.CardRequest import CardRequest
+    from smartcard.Exceptions import CardRequestTimeoutException
+    from smartcard.util import toHexString
+except Exception as x:
+    print(f"FATAL ERROR: We could not load all required libary's! -> {x}")
+    os._exit(1)
 
 class Enviroment():
     __last_chip__ = ""
