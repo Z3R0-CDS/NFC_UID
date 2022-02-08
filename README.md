@@ -7,13 +7,19 @@ Get the UID of an NFC chip/Card
     
     Console usage will be added soon with 0.4
 
-## Modules / Installation 
+## Modules / Installation REPO METHOD
     smartcard is NOT a module it self / well it is you can kinda install it but I could not use it!
     So use pip install pyscard  instead!
     Asides that just run following code and you are ready to go:
 ```
 pip install keyboard
 ```
+
+## Modules / Installation REPO METHOD
+```
+pip install nfc_uid
+```
+
 ## Tested
     Tested Scanner: ACR1252
     Tested OS: Windows 10
@@ -24,6 +30,8 @@ pip install keyboard
 !!!NOT DOCUMENTED UNTIL 0.3.4!!!<br>
 For more infos follow commits
 ```
+0.3.5
+   [+] YAYY we on pypi still dont get it tho
 0.3.4
    [+] Added nfc_reader.loop
    [-] Removed code snippets that were unused
