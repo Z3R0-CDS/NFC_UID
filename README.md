@@ -15,7 +15,7 @@ Get the UID of an NFC chip/Card
 pip install keyboard
 ```
 
-## Modules / Installation REPO METHOD
+## Modules / Installation PIP METHOD
 ```
 pip install nfc_uid
 ```
