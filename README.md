@@ -1,18 +1,33 @@
 # NFC_UID
-Get the UID of an NFC chip/Card
+Get the UID / MAC / HWID of an NFC chip / Card
+
+## Disclaimer
+    I do not promise to maintain this project or to update it frequently!
+    Additions will be made if a bug is found and reported via issues or if I miss a feature or see room for improvement.
+    If you want to add something you can either fork or submit a enhance issue and I will merge if it seems fine.
 
 ## Purp
-    I had a few issues getting a good software or tutorial for this so... I made it.
-    Anyways have fun with it and if you copy it I would be happy to get a mention ^^.
+    I wanted to read the hwid of an nfc chip using python.
+    But I did not find any in the Internet soooo I made it my self.
+    So this script will read an nfc chip/card and return the hwid that is read using pyscard.
     
-    Console usage will be added soon with 0.4
+    The HWID can be returned on multiple ways. Either typing (emulating keyboard typing) or classic return.
+    More details can be read in the code or function documentation.
+    
+    Anyways have fun with it and if you copy it I would be happy to get a mention ^^.
+
+## Soon
+    Console usage (With argument parsing)
+    Version control
+    Rename main.py to nfc_reader.py
+    Add optional logger for file output
 
 ## Modules / Installation REPO METHOD
-    smartcard is NOT a module it self / well it is you can kinda install it but I could not use it!
-    So use pip install pyscard  instead!
-    Asides that just run following code and you are ready to go:
+Clone this repo and run
 ```
 pip install keyboard
+pip install pysscard
+python main.py or import main as nfc_reader
 ```
 
 ## Modules / Installation <a href="https://pypi.org/project/nfc-uid/">PIP</a> METHOD
@@ -20,7 +35,7 @@ pip install keyboard
 pip install nfc_uid
 ```
 
-## Tested
+## Tested Hard/Software
     Tested Scanner: ACR1252
     Tested OS: Windows 10
 
@@ -31,7 +46,7 @@ pip install nfc_uid
 For more infos follow commits
 ```
 0.3.5
-   [+] YAYY we on pypi still dont get it tho
+   [+] Package now on pypi
 0.3.4
    [+] Added nfc_reader.loop
    [-] Removed code snippets that were unused
