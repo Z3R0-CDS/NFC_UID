@@ -11,18 +11,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
-          node-version: '16'
+          python-version: '3.7'
 
       - name: Install dependencies
-        run: npm install
+        run: pip install build twine
 
-      - name: Build and publish package
-        run: |
-          npm run build
-          npx twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+      - name: Build package
+        run: python -m build
+
+      - name: Publish package to PyPI
+        run: python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
         env:
           TWINE_USERNAME: ${{ secrets.PYPI_USER }} 
           TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
