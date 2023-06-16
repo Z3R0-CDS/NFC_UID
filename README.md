@@ -64,7 +64,8 @@ For more infos follow commits
         [*] Renamed loop to looped_read
    [+] Added read function
         [*] Improved arguments
-        [*] 
+        [*] Code less spagetti
+        [+] New timeout options to not spam console and or user
    [*] Updated docstrings
    [*] Updated project targets and documentation
    
