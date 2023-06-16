@@ -1,5 +1,10 @@
 # NFC_UID
-Get the UID / MAC / HWID of an NFC chip / Card
+Get the UID / MAC / HWID of an NFC chip / Card<br>
+Version: 0.4
+
+## Navigation
+- <a href="#Installation">Installation</a>
+- <a href="#Changes">Changelogs</a>
 
 ## Disclaimer
     I do not promise to maintain this project or to update it frequently!
@@ -17,28 +22,32 @@ Get the UID / MAC / HWID of an NFC chip / Card
     Anyways have fun with it and if you copy it I would be happy to get a mention ^^.
     I do not want the project to be abused for private/payed src so we will use GNU v3 from now on 
 
-## Soon
+## Ideas
     Console usage (With argument parsing)
-    Version controll
-    Rename main.py to nfc_reader.py
     Add optional logger for file output
 
-## Modules / Installation REPO METHOD
-Clone this repo and run
-```
-pip install keyboard
-pip install pysscard
-python main.py or import main as nfc_reader
-```
+## Installation
 
-## Modules / Installation <a href="https://pypi.org/project/nfc-uid/">PIP</a> METHOD
+### Recommended <a href="https://pypi.org/project/nfc-uid/">PIP</a> METHOD
 ```
 pip install nfc_uid
 ```
+Usage: import nfc_uid
+
+#### REPO METHOD / Local usage
+- Clone this repo
+- Run these commands
+```
+pip install keyboard
+pip install pysscard
+```
+
+Usage: python main.py or import main as nfc_uid
 
 ## Tested Hard/Software
     Tested Scanner: ACR1252
-    Tested OS: Windows 10
+    Tested OS     : Windows 10
+    Python        : 3.7
 
 
 ## Changes
@@ -46,6 +55,19 @@ pip install nfc_uid
 !!!NOT DOCUMENTED UNTIL 0.3.4!!!<br>
 For more infos follow commits
 ```
+0.4
+   [+] Package now automatic on pypi
+   [+] Added version checks (warns if logging is set to True)
+           -> By default True
+   [+] Changed to object oriented src
+        [!] nfc_read is depricated (warns if logging is set to True)
+        [*] Renamed loop to looped_read
+   [+] Added read function
+        [*] Improved arguments
+        [*] 
+   [*] Updated docstrings
+   [*] Updated project targets and documentation
+   
 0.3.5
    [+] Package now on pypi
 0.3.4
