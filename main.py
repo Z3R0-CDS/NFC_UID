@@ -1,6 +1,5 @@
 import time
 from packaging.version import parse as parse_version
-import sys
 import os
 try:
     from smartcard.CardType import AnyCardType
@@ -30,7 +29,7 @@ except Exception as x:
     
 class NFC_UID:
     __version = "0.4"
-    name="nfc-uid"
+    __name="nfc-uid"
     pypi_version=None
     logging = True
     last_chip = ""
@@ -45,7 +44,7 @@ class NFC_UID:
                 print("Update is available")
     def __is_pypi_version_newer(self):
         try:
-            response = requests.get(f"https://pypi.org/pypi/{self.name}/json")
+            response = requests.get(f"https://pypi.org/pypi/{self.__name}/json")
             response.raise_for_status()
             data = response.json()
             latest_version = data["info"]["version"]
@@ -67,7 +66,6 @@ class NFC_UID:
             try:
                 if output:
                     print("Waiting for NFC-Card..")
-                print(counter)
                 getuid = [0xFF, 0xCA, 0x00, 0x00, 0x00]
                 act = AnyCardType()
                 cr = CardRequest(timeout=connectTimeout, cardType=act)
