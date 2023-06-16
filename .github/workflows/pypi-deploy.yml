@@ -1,0 +1,36 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Install libpcsclite-dev
+        run: sudo apt-get install libpcsclite-dev
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7'
+
+      - name: Install dependencies
+        run: pip install build twine
+
+      - name: Build package
+        run: python -m build
+
+      - name: Publish package to PyPI
+        run: python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+        env:
+          TWINE_USERNAME: ${{ secrets.PYPI_USER }} 
+          TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+
+      - name: Include README in distribution
+        run: |
+          cp README.md dist/

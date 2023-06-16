@@ -1,0 +1,6 @@
+[build-system]
+requires=['keyboard>=0.13.5',
+            'pyscard>=2.0.2',
+            'setuptools'
+]
+build-backend = "setuptools.build_meta"
