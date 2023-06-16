@@ -10,7 +10,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+        
+      - name: Install libpcsclite-dev
+        run: sudo apt-get install libpcsclite-dev
+        
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
