@@ -15,10 +15,11 @@ Get the UID / MAC / HWID of an NFC chip / Card
     More details can be read in the code or function documentation.
     
     Anyways have fun with it and if you copy it I would be happy to get a mention ^^.
+    I do not want the project to be abused for private/payed src so we will use GNU v3 from now on 
 
 ## Soon
     Console usage (With argument parsing)
-    Version control
+    Version controll
     Rename main.py to nfc_reader.py
     Add optional logger for file output
 
