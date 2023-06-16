@@ -1,12 +1,33 @@
-
-from smartcard.CardType import AnyCardType
-from smartcard.CardRequest import CardRequest
-from smartcard.Exceptions import CardRequestTimeoutException
-from smartcard.util import toHexString
-import keyboard as Keyboard
 import time
-import requests
 from packaging.version import parse as parse_version
+import sys
+import os
+try:
+    from smartcard.CardType import AnyCardType
+    from smartcard.CardRequest import CardRequest
+    from smartcard.Exceptions import CardRequestTimeoutException
+    from smartcard.util import toHexString
+except ImportError:
+    os.system('python -m pip install pyscard')
+try:
+    import requests
+except ImportError:
+    os.system('python -m pip install requests')
+try:
+    import keyboard as Keyboard
+except ImportError:
+    os.system('python -m pip install keyboard')
+try:
+    import keyboard as Keyboard  
+    import requests
+    from smartcard.CardType import AnyCardType
+    from smartcard.CardRequest import CardRequest
+    from smartcard.Exceptions import CardRequestTimeoutException
+    from smartcard.util import toHexString
+except Exception as x:
+    print(f"FATAL ERROR: We could not load all required libary's! -> {x}")
+    os._exit(1)
+    
 class NFC_UID:
     __version = "0.4"
     name="nfc-uid"
@@ -32,7 +53,6 @@ class NFC_UID:
             return parse_version(latest_version) > parse_version(self.__version)
         except (requests.RequestException, KeyError):
             return False
-
     def read(self, output=True, keyboardType=False, connectTimeout=120, maxRetrys=8, cooldown=2):
         """
         Returns UID of NFC Chip/Card
