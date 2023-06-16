@@ -1,5 +1,3 @@
-name: Publish to PyPI
-
 on:
   push:
     branches:
@@ -13,18 +11,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          python-version: 3.7
+          node-version: '16'
 
       - name: Install dependencies
-        run: pip install build twine
+        run: npm install
 
       - name: Build and publish package
         run: |
-          python -m build
-          python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+          npm run build
+          npx twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
         env:
           TWINE_USERNAME: ${{ secrets.PYPI_USER }} 
           TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+
+      - name: Include README in distribution
+        run: |
+          cp README.md dist/
