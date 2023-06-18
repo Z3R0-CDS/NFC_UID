@@ -95,7 +95,7 @@ class NFC_UID:
             counter+=1
             time.sleep(cooldown)
 
-    def nfc_read(self, debug=True ,output=True, keyboard_output=False, set_timeout=120, set_cooldown = 3):
+    def nfc_reader(self, debug=True ,output=True, keyboard_output=False, set_timeout=120, set_cooldown = 3):
         """
         Returns UID of NFC Chip/Card
         Set ouput to False if no output is required default is True
