@@ -3,8 +3,9 @@ Get the UID / MAC / HWID of an NFC chip / Card<br>
 Version: 0.4
 
 ## Navigation
-- <a href="#Installation">Installation</a>
-- <a href="#Changes">Changelogs</a>
+- <a href="\docs\installation.md">Installation</a>
+- <a href="\docs\changelog.md">Changelogs</a>
+- <a href="\docs\migration.md">Migrating to 0.4</a>
 
 ## Disclaimer
     I do not promise to maintain this project or to update it frequently!
@@ -26,52 +27,11 @@ Version: 0.4
     Console usage (With argument parsing)
     Add optional logger for file output
 
-## Installation
-
-### Recommended <a href="https://pypi.org/project/nfc-uid/">PIP</a> METHOD
-```
-pip install nfc_uid
-```
-Usage: import nfc_uid
-
-#### REPO METHOD / Local usage
-- Clone this repo
-- Run these commands
-```
-pip install keyboard
-pip install pysscard
-```
-
-Usage: python main.py or import main as nfc_uid
 
 ## Tested Hard/Software
+    While coding this software I only used the following Scanner, OS and python Version.
+    I do not gurantee that code works as intended if you change any parameter
+
     Tested Scanner: ACR1252
     Tested OS     : Windows 10
     Python        : 3.7
-
-
-## Changes
-
-!!!NOT DOCUMENTED UNTIL 0.3.4!!!<br>
-For more infos follow commits
-```
-0.4
-   [+] Package now automatic on pypi
-   [+] Added version checks (warns if logging is set to True)
-           -> By default True
-   [+] Changed to object oriented src
-        [!] nfc_read is depricated (warns if logging is set to True)
-        [*] Renamed loop to looped_read
-   [+] Added read function
-        [*] Improved arguments
-        [*] Code less spagetti
-        [+] New timeout options to not spam console and or user
-   [*] Updated docstrings
-   [*] Updated project targets and documentation
-   
-0.3.5
-   [+] Package now on pypi
-0.3.4
-   [+] Added nfc_reader.loop
-   [-] Removed code snippets that were unused
-```
