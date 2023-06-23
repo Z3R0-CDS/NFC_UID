@@ -36,5 +36,5 @@ jobs:
           cp README.md dist/
           
       - name: Include main.py in distribution
-        run: cp path/to/main.py dist/
+        run: cp main.py dist/
 
