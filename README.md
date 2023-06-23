@@ -1,5 +1,11 @@
 # NFC_UID
-Get the UID / MAC / HWID of an NFC chip / Card
+Get the UID / MAC / HWID of an NFC chip / Card<br>
+Version: 0.4
+
+## Navigation
+- <a href="\docs\installation.md">Installation</a>
+- <a href="\docs\changelog.md">Changelogs</a>
+- <a href="\docs\migration.md">Migrating to 0.4</a>
 
 ## Disclaimer
     I do not promise to maintain this project or to update it frequently!
@@ -17,38 +23,15 @@ Get the UID / MAC / HWID of an NFC chip / Card
     Anyways have fun with it and if you copy it I would be happy to get a mention ^^.
     I do not want the project to be abused for private/payed src so we will use GNU v3 from now on 
 
-## Soon
+## Ideas
     Console usage (With argument parsing)
-    Version controll
-    Rename main.py to nfc_reader.py
     Add optional logger for file output
 
-## Modules / Installation REPO METHOD
-Clone this repo and run
-```
-pip install keyboard
-pip install pysscard
-python main.py or import main as nfc_reader
-```
-
-## Modules / Installation <a href="https://pypi.org/project/nfc-uid/">PIP</a> METHOD
-```
-pip install nfc_uid
-```
 
 ## Tested Hard/Software
+    While coding this software I only used the following Scanner, OS and python Version.
+    I do not gurantee that code works as intended if you change any parameter
+
     Tested Scanner: ACR1252
-    Tested OS: Windows 10
-
-
-## Changes
-
-!!!NOT DOCUMENTED UNTIL 0.3.4!!!<br>
-For more infos follow commits
-```
-0.3.5
-   [+] Package now on pypi
-0.3.4
-   [+] Added nfc_reader.loop
-   [-] Removed code snippets that were unused
-```
+    Tested OS     : Windows 10
+    Python        : 3.7
