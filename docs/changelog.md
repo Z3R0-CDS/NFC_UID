@@ -3,6 +3,9 @@
 !!!NOT DOCUMENTED UNTIL 0.3.4!!!<br>
 For more infos follow commits
 ```
+0.4.1
+   Fixed issues with pypi
+
 0.4
    [+] Package now automatic on pypi
    [+] Added version checks (warns if logging is set to True)
