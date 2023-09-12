@@ -25,16 +25,25 @@ jobs:
       - name: Build package
         run: python -m build
 
+      - name: Include README in distribution
+        run: |
+          cp README.md dist/
+
+      - name: Show repo
+        run: |
+          ls 
+          ls dist/
+          
+      - name: Include main.py in distribution
+        run: cp main.py dist/
+
       - name: Publish package to PyPI
         run: python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
         env:
           TWINE_USERNAME: ${{ secrets.PYPI_USER }} 
           TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
 
-      - name: Include README in distribution
+      - name: Show repo
         run: |
-          cp README.md dist/
-          
-      - name: Include main.py in distribution
-        run: cp main.py dist/
-
+          ls 
+          ls dist/
