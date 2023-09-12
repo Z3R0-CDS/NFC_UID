@@ -3,7 +3,7 @@
 ### Recommended <a href="https://pypi.org/project/nfc-uid/">PIP</a> METHOD
 
 ```
-pip install nfc_uid
+pip install nfc-uid
 ```
 Usage
 ```
