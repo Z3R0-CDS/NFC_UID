@@ -12,6 +12,7 @@ try:
     import requests
 except ImportError:
     os.system('python -m pip install requests')
+    os.system('python -m pip install urllib3==1.26.15')
 try:
     import keyboard as Keyboard
 except ImportError:
@@ -28,9 +29,9 @@ except Exception as x:
     os._exit(1)
     
 class NFC_UID:
-    __version = "0.4"
+    __version = "0.5"
     __name="nfc-uid"
-    pypi_version=None
+    pypi_version="0.5"
     logging = True
     last_chip = ""
     loop = True

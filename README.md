@@ -5,7 +5,7 @@ Version: 0.4
 ## Navigation
 - <a href="\docs\installation.md">Installation</a>
 - <a href="\docs\changelog.md">Changelogs</a>
-- <a href="\docs\migration.md">Migrating to 0.4</a>
+- <a href="\docs\migration.md">Migrating to 0.5</a>
 
 ## Disclaimer
     I do not promise to maintain this project or to update it frequently!

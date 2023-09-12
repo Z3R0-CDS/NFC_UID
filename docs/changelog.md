@@ -3,8 +3,10 @@
 !!!NOT DOCUMENTED UNTIL 0.3.4!!!<br>
 For more infos follow commits
 ```
-0.4.1
-   Fixed issues with pypi
+0.5
+    [+] Pypi releases fixed
+    [+] Urllib3 bugs resolved
+    [+] Resolved bugs with version controll
 
 0.4
    [+] Package now automatic on pypi

@@ -1,13 +1,15 @@
 ## Installation
 
 ### Recommended <a href="https://pypi.org/project/nfc-uid/">PIP</a> METHOD
-!!!!!!! Currently I am not really able to use github actions as I want to !!!!!!!!
-0.4.x is currently "broken" in pypi please wait with install until I fixed that... Sorry
 
 ```
 pip install nfc_uid
 ```
-Usage: import nfc_uid
+Usage
+```
+from nfc_uid import nfc_uid
+```
+
 
 #### REPO METHOD / Local usage
 - Clone this repo
@@ -15,6 +17,8 @@ Usage: import nfc_uid
 ```
 pip install keyboard
 pip install pysscard
+pip install requests
+pip install urllib3==1.26.15
 ```
 
 Usage: python main.py or import main as nfc_uid
