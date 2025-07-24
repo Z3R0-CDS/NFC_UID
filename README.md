@@ -34,4 +34,4 @@ Version: 0.4
 
     Tested Scanner: ACR1252
     Tested OS     : Windows 10
-    Python        : 3.7
+    Python        : 3.7 / 3.8

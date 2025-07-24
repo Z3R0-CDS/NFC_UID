@@ -3,6 +3,11 @@
 !!!NOT DOCUMENTED UNTIL 0.3.4!!!<br>
 For more infos follow commits
 ```
+0.5.1
+    [+] Simplified imports
+    [*] Fixed pyproject.toml
+    [*] Updated documentation
+
 0.5
     [+] Pypi releases fixed
     [+] Urllib3 bugs resolved

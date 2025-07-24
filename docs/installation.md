@@ -7,11 +7,13 @@ pip install nfc-uid
 ```
 Usage
 ```
-from nfc_uid import nfc_uid
+import nfc_uid
+
+supercoolstuff = nfc_uid.NFC_UID()
 ```
 
 
-#### REPO METHOD / Local usage
+#### REPO Clone / Local usage
 - Clone this repo
 - Run these commands
 ```
