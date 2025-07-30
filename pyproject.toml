@@ -2,8 +2,23 @@
 requires=["setuptools"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools]
+packages = ["nfc_uid"]
+
 [project]
-requires=[
+name = "nfc_uid"
+version = "0.5.1"
+description = "Get UUID of NFC card with a scanner."
+readme = "README.md"
+requires-python = ">=3.7"
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3.7",
+  "Natural Language :: English"
+]
+dependencies=[
     "keyboard>=0.13.5",
     "pyscard>=2.0.2",
     "setuptools",
