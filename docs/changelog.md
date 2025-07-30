@@ -7,6 +7,7 @@ For more infos follow commits
     [+] Simplified imports
     [*] Fixed pyproject.toml
     [*] Updated documentation
+    [-] Removed setup.cfg
 
 0.5
     [+] Pypi releases fixed

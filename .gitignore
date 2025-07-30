@@ -1,3 +1,5 @@
 
 .idea/
 *.pyc
+nfc_uid.egg-info
+build
